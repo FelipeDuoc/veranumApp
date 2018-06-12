@@ -1,6 +1,6 @@
 <%-- 
-    Document   : reservaCliente
-    Created on : 09-06-2018, 12:32:50
+    Document   : AdministrarReserva
+    Created on : 11-06-2018, 23:16:33
     Author     : Felipe
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Reserva</title>
+        <title>Reserva admin</title>
     </head>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -27,8 +27,9 @@
         });
         </script>
     <body>
-        <h1>Reservar Habitación</h1>
+        <h1>Adminitrar Reserva</h1>
         <form>
+            Rut: <input id="rut" type="text"/> <br/>
             Fecha Inicio: <input id="fechainicio"/> <br/>
             Fecha Inicio: <input id="fechatermino"/> <br/>
             Habitación: <select>
@@ -43,3 +44,4 @@
         </form>
     </body>
 </html>
+
