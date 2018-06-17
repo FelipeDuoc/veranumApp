@@ -13,8 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import modelo.DAO.PersonaDAO;
+import modelo.DAO.PersonaDAOImpl;
 import modelo.DAO.UsuarioDAO;
 import modelo.DAO.UsuarioDAOImpl;
+import modelo.bean.Persona;
 import modelo.bean.Usuario;
 
 /**
@@ -22,7 +25,7 @@ import modelo.bean.Usuario;
  * @author Felipe
  */
 
-@WebServlet(name = "Profile", urlPatterns = {"/Controlador"})
+@WebServlet(name = "Controlador", urlPatterns = {"/Controlador"})
 public class Controlador extends HttpServlet{
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -34,6 +37,8 @@ public class Controlador extends HttpServlet{
         HttpSession sesion = request.getSession();
      
         switch(seleccion){
+            
+            //Iniciar Sesion
             case "1":
                 String usuario = request.getParameter("usuario");
                 String password = request.getParameter("password");
@@ -55,6 +60,44 @@ public class Controlador extends HttpServlet{
                 {
                     response.sendRedirect("loginNOK.jsp");
                 }
+            break;
+            
+            case "2":
+                Persona persona = new Persona();
+                persona.setRut(request.getParameter("rut"));
+                persona.setNombres(request.getParameter("nombre"));
+                persona.setApellido_paterno(request.getParameter("apellidopaterno"));
+                persona.setApellido_materno(request.getParameter("apellidomaterno"));
+                persona.setNombre_calle(request.getParameter("direccion"));
+                persona.setNumero_calle(request.getParameter("nro"));
+                persona.setEmpresa_id(Integer.parseInt(request.getParameter("empresa")));
+                persona.setComuna_id(Integer.parseInt(request.getParameter("comuna")));
+                persona.setNumero_telefono(request.getParameter("telefono"));
+                persona.setEmail_persona(request.getParameter("correo"));
+                persona.setHotel_id(1);
+                
+                PersonaDAO per = new PersonaDAOImpl();
+                int resultado = per.insertPersona(persona);
+                
+                if(resultado!=0){
+                    Usuario user = new Usuario();
+                    user.setNombre_usuario(request.getParameter("usuario"));
+                    user.setPassword_usuario(request.getParameter("password"));
+                    user.setPersona_id(resultado);
+                    user.setRol_id(4);
+                    
+                    UsuarioDAO userdao = new UsuarioDAOImpl();
+                    int resultadoUser = userdao.CrearUsuario(user);
+                    
+                    if(resultadoUser!=0){
+                        response.sendRedirect("registroClienteOK.jsp");
+                    }else{
+                        response.sendRedirect("registroClienteNOK.jsp");
+                    }
+                    
+                }
+                
+            
             break;
         
         }

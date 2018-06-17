@@ -14,5 +14,6 @@ import modelo.bean.Usuario;
 public interface UsuarioDAO {
     
     public Usuario login(String user, String pass);
+    public int CrearUsuario(Usuario usuario);
     
 }

@@ -61,5 +61,37 @@ public class UsuarioDAOImpl implements UsuarioDAO{
         }
         return toReturn;
     }
+
+    @Override
+    public int CrearUsuario(Usuario usuario) {
+        int resultado = 0;
+        Usuario toReturn = null;
+        cx = new Conexion();
+        con = cx.getCon();
+        OracleCallableStatement ps = null;
+        ResultSet rs = null;
+        try {
+            ps = (OracleCallableStatement) con.prepareCall("{call PKG_USUARIO.PROC_INSERT_USUARIO(?,?,?,?)}");
+            ps.setString(1, usuario.getNombre_usuario());
+            ps.setString(2, usuario.getPassword_usuario());
+            ps.setInt(3, usuario.getPersona_id());
+            ps.setInt(4, usuario.getRol_id());
+            
+            ps.execute();
+            
+            resultado = 1;
+            
+        } catch (SQLException ex) {
+            logger.log(Level.INFO, "CALL PROCEDURE PKG_USUARIO.PROC_INSERT_USUARIO, sql exception statement: {0}", ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                logger.log(Level.SEVERE, null, ex);
+            }
+        }
+        return resultado;
+    }
+    
     
 }

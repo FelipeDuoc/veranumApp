@@ -23,11 +23,12 @@ public class Persona {
     private int empresa_id;
     private int hotel_id;
     private int comuna_id;
+    private int provincia_id;
 
     public Persona() {
     }
 
-    public Persona(int id_persona, String rut, String nombres, String apellido_paterno, String apellido_materno, String nombre_calle, String numero_calle, String numero_telefono, String email_persona, String estado_persona, int empresa_id, int hotel_id, int comuna_id) {
+    public Persona(int id_persona, String rut, String nombres, String apellido_paterno, String apellido_materno, String nombre_calle, String numero_calle, String numero_telefono, String email_persona, String estado_persona, int empresa_id, int hotel_id, int comuna_id, int provincia_id) {
         this.id_persona = id_persona;
         this.rut = rut;
         this.nombres = nombres;
@@ -41,9 +42,8 @@ public class Persona {
         this.empresa_id = empresa_id;
         this.hotel_id = hotel_id;
         this.comuna_id = comuna_id;
+        this.provincia_id = provincia_id;
     }
-    
-    
 
     public int getId_persona() {
         return id_persona;
@@ -149,11 +149,23 @@ public class Persona {
         this.comuna_id = comuna_id;
     }
 
+    public int getProvincia_id() {
+        return provincia_id;
+    }
+
+    public void setProvincia_id(int provincia_id) {
+        this.provincia_id = provincia_id;
+    }
+
     @Override
     public String toString() {
-        return "Persona{" + "id_persona=" + id_persona + ", rut=" + rut + ", nombres=" + nombres + ", apellido_paterno=" + apellido_paterno + ", apellido_materno=" + apellido_materno + ", nombre_calle=" + nombre_calle + ", numero_calle=" + numero_calle + ", numero_telefono=" + numero_telefono + ", email_persona=" + email_persona + ", estado_persona=" + estado_persona + ", empresa_id=" + empresa_id + ", hotel_id=" + hotel_id + ", comuna_id=" + comuna_id + '}';
+        return "Persona{" + "id_persona=" + id_persona + ", rut=" + rut + ", nombres=" + nombres + ", apellido_paterno=" + apellido_paterno + ", apellido_materno=" + apellido_materno + ", nombre_calle=" + nombre_calle + ", numero_calle=" + numero_calle + ", numero_telefono=" + numero_telefono + ", email_persona=" + email_persona + ", estado_persona=" + estado_persona + ", empresa_id=" + empresa_id + ", hotel_id=" + hotel_id + ", comuna_id=" + comuna_id + ", provincia_id=" + provincia_id + '}';
     }
+
     
+    
+
+
     
     
     
