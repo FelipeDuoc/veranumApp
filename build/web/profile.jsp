@@ -16,14 +16,20 @@
             if(nombreUsuario==null)
             {
                response.sendRedirect("login.jsp");
+            }else{
+               
             }
-        %>
+    %>
     <body>
         <h1>Bienvenido <%=nombreUsuario %> </h1>
         <p>
             Texto de prueba
             
         </p>
+        
+        <h3><a href="http://localhost:8080/VeranumApp/reservaCliente.jsp">Reservar!</a></h3>
+        
         <h3><a href="http://localhost:8080/VeranumApp/cierreSesion.jsp">Cierre Sesion</a></h3>
+        
     </body>
 </html>

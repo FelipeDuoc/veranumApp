@@ -5,7 +5,10 @@
  */
 package control;
 
+import com.google.gson.Gson;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +21,7 @@ import modelo.DAO.PersonaDAOImpl;
 import modelo.DAO.UsuarioDAO;
 import modelo.DAO.UsuarioDAOImpl;
 import modelo.bean.Persona;
+import modelo.bean.TipoHabitacion;
 import modelo.bean.Usuario;
 
 /**
@@ -29,6 +33,7 @@ import modelo.bean.Usuario;
 public class Controlador extends HttpServlet{
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         response.setContentType("text/html;charset=UTF-8");
         
         String seleccion = request.getParameter("seleccion");
@@ -51,6 +56,7 @@ public class Controlador extends HttpServlet{
                 {
                     sesion.setAttribute("usuario", usuario);
                     sesion.setAttribute("nombreUsuario", usesion.getNombre_usuario());
+                    sesion.setAttribute("idHotel", usesion.getPersona_id());
                     
                     dispatcher = request.getRequestDispatcher("/profile.jsp");
                     dispatcher.forward(request, response);
@@ -63,6 +69,7 @@ public class Controlador extends HttpServlet{
             break;
             
             case "2":
+                //Registrarse
                 Persona persona = new Persona();
                 persona.setRut(request.getParameter("rut"));
                 persona.setNombres(request.getParameter("nombre"));
@@ -99,6 +106,20 @@ public class Controlador extends HttpServlet{
                 
             
             break;
+            
+            case "3":
+                List<TipoHabitacion> tipoHab = new ArrayList<TipoHabitacion>();
+                
+                TipoHabitacion tip = new TipoHabitacion(1, "aa", 10, "a", "a");
+                tipoHab.add(tip);
+                
+                String json = new Gson().toJson(tipoHab);
+
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write(json);
+                
+            break;
         
         }
     }
@@ -106,6 +127,11 @@ public class Controlador extends HttpServlet{
      @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        String action = request.getParameter("cantidad");
+        String tipocama = request.getParameter("tipocama");
+        
+        
         processRequest(request, response);
 
     }
@@ -115,6 +141,10 @@ public class Controlador extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        String action = request.getParameter("cantidad");
+        String tipocama = request.getParameter("tipocama");
+        
     }
 
 
