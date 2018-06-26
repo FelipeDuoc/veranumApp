@@ -16,5 +16,6 @@
         <h1>Bienvenido</h1>
         <h3><a href="http://localhost:8080/VeranumApp/login.jsp">Iniciar Sesión</a></h3>
         <h3><a href="http://localhost:8080/VeranumApp/registroCliente.jsp">Registrarse</a></h3>
+        <h3><a href="http://localhost:8080/VeranumApp/ofertas.jsp">Ver Ofertas</a></h3>
     </body>
 </html>

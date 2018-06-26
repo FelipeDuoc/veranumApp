@@ -106,20 +106,6 @@ public class Controlador extends HttpServlet{
                 
             
             break;
-            
-            case "3":
-                List<TipoHabitacion> tipoHab = new ArrayList<TipoHabitacion>();
-                
-                TipoHabitacion tip = new TipoHabitacion(1, "aa", 10, "a", "a");
-                tipoHab.add(tip);
-                
-                String json = new Gson().toJson(tipoHab);
-
-                response.setContentType("application/json");
-                response.setCharacterEncoding("UTF-8");
-                response.getWriter().write(json);
-                
-            break;
         
         }
     }

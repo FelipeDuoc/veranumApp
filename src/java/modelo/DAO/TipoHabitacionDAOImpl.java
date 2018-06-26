@@ -67,5 +67,46 @@ public class TipoHabitacionDAOImpl implements TipoHabitacionDAO{
         }
         return lista;
     }
+
+    @Override
+    public List<TipoHabitacion> verTipoHabitacionOferta() {
+        List<TipoHabitacion> lista = new ArrayList<TipoHabitacion>();
+        TipoHabitacion tip = null;
+        cx = new Conexion();
+        con = cx.getCon();
+        OracleCallableStatement ps = null;
+        ResultSet rs = null;
+        try {
+            ps = (OracleCallableStatement) con.prepareCall("{call PKG_TIPO_HABITACION.PROC_SELECT_HAB_OFERTA(?)}");
+            ps.registerOutParameter(1, OracleTypes.CURSOR);
+            
+            ps.execute();
+            
+            rs = (ResultSet) ps.getObject(1);
+            
+            while (rs.next()) {
+                tip = new TipoHabitacion();
+                tip.setId_tipo_habitacion(rs.getInt(1));
+                tip.setNombre_tipo_habitacion(rs.getString(2));
+                tip.setValor_diario_habitacion(rs.getInt(3));
+                tip.setValor_diario_hab_oferta(rs.getInt(4));
+                tip.setPorcentaje_descuento(rs.getInt(5));
+                tip.setNombre_tipo_banio(rs.getString(6));
+                tip.setNombre_tipo_cama(rs.getString(7));
+                
+                lista.add(tip);
+                
+            }
+        } catch (SQLException ex) {
+            logger.log(Level.INFO, "CALL PROCEDURE PKG_TIPO_HABITACION.PROC_SELECT_HAB_OFERTA, sql exception statement: {0}", ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                logger.log(Level.SEVERE, null, ex);
+            }
+        }
+        return lista;
+    }
     
 }

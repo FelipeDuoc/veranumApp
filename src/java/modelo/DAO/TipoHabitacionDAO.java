@@ -14,4 +14,5 @@ import modelo.bean.TipoHabitacion;
  */
 public interface TipoHabitacionDAO {
     public List<TipoHabitacion> verTipoHabitacion(int tipocama, int cantidadPersona, String user);
+    public List<TipoHabitacion> verTipoHabitacionOferta();
 }
