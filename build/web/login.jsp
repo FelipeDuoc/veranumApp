@@ -40,8 +40,8 @@
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
-						<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +090 480 088</li>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">mail@example.com</a></li>
+						<li> <a href="login.jsp"> Ingresar</a>  </li>
+						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">hola@veranum.cl</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -123,17 +123,22 @@
 								
 							</div>
 									<div class="w3_mail_grids">
-										<form action="#" method="post">
-											<div class="col-md-12 w3_agile_mail_grid">
-													<input style="text-align:center" class=""  type="text" placeholder="Nombre de Usuario"  required="">
-													<input style="text-align:center" type="password" placeholder="Password" required="">
+										<form method="post" action="http://localhost:8080/VeranumApp/Controlador">
+											<div class="col-md-12 w3_agile_mail_grid">                                                                                         
+                                                                                            
+													<input style="text-align:center" class="col-md-offset-3 col-md-6"   type="text" name="usuario" placeholder="Nombre de Usuario"  required="">
+													<input style="text-align:center" class="col-md-offset-3 col-md-6"   type="password" name="password" placeholder="Password" required="">
 											</div>
                                                                                         <div class="col-md-12 w3_agile_mail_grid">
-												<input type="submit" value="Ingresar">
+												<input class="col-md-offset-5" type="submit" value="Ingresar">
+                                                                                                <input type="hidden" value="1" name="seleccion" />
 											</div>
+                                                                                    
+                                                                                    
 											<div class="clearfix"> </div>
 										</form>
-							</div>
+                                                                                <h5 class="text-center"> <div style="margin-top: 20px;">¿No tienes cuenta? Registrate <a href="registroCliente.jsp"> aquí </a></div> </h5>
+							</div>  
 					   </div>
 	
 			  </div>

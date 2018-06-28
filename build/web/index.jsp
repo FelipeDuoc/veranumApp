@@ -40,8 +40,8 @@
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
-						<li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +569 5976 8257</li>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">hola@veranum.cl</a></li>
+                                            <li> <a href="login.jsp"> Ingresar</a>  </li>
+                                            <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">hola@veranum.cl</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
