@@ -12,7 +12,7 @@
         <title>Mis Reservas</title>
     </head>
     <%
-        String idPersona = (String)session.getAttribute("idPersona");
+        Integer _idPersona = (Integer)session.getAttribute("idPersona"); 
         
     
     

@@ -28,7 +28,7 @@
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     </head>
     <%String nombreUsuario = (String)session.getAttribute("nombreUsuario");
-    String idPersona = (String)session.getAttribute("idPersona");%>
+    %>
     <body>
         
         <div class="w3layouts-top-strip">
@@ -92,6 +92,8 @@
                                                                                                 
                                                                                                 if(nombreUsuario!=null)
                                                                                                 {
+                                                                                                            
+                                                                                                    
                                                                                                         %>
                                                                                                 <li class="active"><a href="misReservas.jsp">Mis Reservas</a></li>        
                                                                                                         <%
