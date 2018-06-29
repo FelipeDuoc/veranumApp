@@ -96,13 +96,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 										
 				 <ul class="nav navbar-nav">
-											<li><a href="index.html">Home</a></li>
+											<li><a href="index.jsp">Home</a></li>
 												<li><a href="about.html">Nosotros</a></li>
 												<li><a href="gallery.html">Galeria</a></li>
 												<li class="active"><a href="reservaCliente.jsp">Reservar</a></li>
 
 												<li><a href="contact.html">Contacto</a></li>
-
+                                                                                                   <%
+                                                                                                if(nombreUsuario!=null)
+                                                                                                {
+                                                                                                   %>
+                                                                                                 <li><a href="misReservas.jsp">Mis Reservas</a></li>        
+                                                                                                        <%
+                                                                                                }
+                                                                                                    %>             
 											
 										</ul>
 
@@ -155,23 +162,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3 class="tittle why">Reservar</h3>
 			<div class="book-form">
 
-			   <form action="#" method="post">
+			   <form action="#">
 
 
 					 <div class="col-md-6 form-date-w3-agileits">
 									<label><i class="fa fa-calendar" aria-hidden="true"></i> Fecha Inicio :</label>
-									<input  id="datepicker" name="fechainicio"type="text" value="dd/mm/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
+									<input  id="fechainicio" name="fechainicio" type="text" value="dd/mm/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
 								
 								</div>
 
 					<div class="col-md-6 form-date-w3-agileits">
 						        <label><i class="fa fa-calendar" aria-hidden="true"></i> Fecha Termino :</label>
-									<input  id="datepicker1" name="fechatermino" type="text" value="dd/mm/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
+									<input  id="fechatermino" name="fechatermino" type="text" value="dd/mm/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
 									
                                         </div>
 					<div class="col-md-6 form-left-agileits-w3layouts bottom-w3ls">
 							<label><i class="fa fa-home" aria-hidden="true"></i> Tipo Cama :</label>
-							<select name="tipocama" class="form-control">
+							<select name="tipocama" id="tipocama" class="form-control">
 								<option></option>
 								<option value="1">1 Cama Doble</option>
                                                                 <option value="2">2 Cama Doble</option>
@@ -181,7 +188,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-6 form-left-agileits-w3layouts second-agile">
 							<label><i class="fa fa-users" aria-hidden="true"></i> Numero de Personas :</label>
-							<select name="cantidadpersona" class="form-control">
+							<select name="cantidadpersona" id="cantidadpersona" class="form-control">
 								<option></option>
 								<option value="1">1</option>
                                                                 <option value="2">2</option>
@@ -198,15 +205,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                
 					<div class="clearfix"> </div>
 					<div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
-						  <input type="submit" value="Reservar">
+                                            <input type="button" value="Consultar" id="consultar" name="consultar">
 					</div>
                                         
-                                        <div id="loading" style="display: none"> Cargando...</div>
+                                        
                                         <input type="hidden" value="<%=nombreUsuario%>" name="nombreUsuario" id=nombreUsuario"/>
                                         
                             </form>
+                            
                         </div>
-
+                                        
 		</div>
 		<div class="col-md-6 w3l_about_bottom_left">
 			
@@ -215,7 +223,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h4>Reserva Ahora!</h4>
 			</div>
 		</div>
-		
+                                        
+		<div id="loading" style="display: none"> Cargando...</div>
+                <div id="somediv">
+            
+                </div>                        
+                                        
 		<div class="clearfix"> </div>
 	</div> 
                                       
@@ -301,7 +314,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		
 			<div class="w3agile_footer_copy">
-				    <p>© 2017 Resort. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				    <p>© 2018 Veranum. Todos los derechos reservados</p>
 			</div>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -377,38 +390,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--js for bootstrap working-->
 	<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
-        
-        
-        
-        <h1>Reservar Habitación</h1>
-        <form method="#">
-            
-            Fecha Inicio: <input name="fechainicio" id="fechainicio"/> <br/>
-            Fecha Termino: <input name="fechatermino" id="fechatermino"/> <br/>
-            Personas: <select name="cantidadpersona" id="cantidadpersona">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            Tipo cama: <select name="tipocama" id="tipocama">
-                <option value="1">1 Cama Doble</option>
-                <option value="2">2 Cama Doble</option>
-                <option value="3">1 Cama Simple</option>
-                <option value="4">2 Cama Simple</option>
-            </select>
-            
-            Servicios extras:
-            <input type="checkbox" value="1" id="servicioextra">
-
-            <input type="button" id="consultar" name="consultar" value="consultar"/>
-            <div id="loading" style="display: none"> Cargando...</div>
-            <input type="hidden" value="<%=nombreUsuario%>" name="nombreUsuario" id=nombreUsuario"/>
-        </form>
-        
-        <br/><br/>
-        <table id="somediv" >
-            
-        </table>
     </body>
 </html>

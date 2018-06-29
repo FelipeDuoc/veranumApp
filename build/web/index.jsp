@@ -27,6 +27,8 @@
 <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     </head>
+    <%String nombreUsuario = (String)session.getAttribute("nombreUsuario");
+    String idPersona = (String)session.getAttribute("idPersona");%>
     <body>
         
         <div class="w3layouts-top-strip">
@@ -40,8 +42,21 @@
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
-                                            <li> <a href="login.jsp"> Ingresar</a>  </li>
-                                            <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">hola@veranum.cl</a></li>
+                                            
+                                            
+                                            <%if(nombreUsuario==null){ %>
+                                             <li> <a href="login.jsp"> INCIA SESION</a> </li>
+                                             <li> <a href="registroCliente.jsp">| REGISTRATE !</a></li>
+                                             <%
+                                            }else{
+                                            %>
+                                             <li>| Usuario: <%=nombreUsuario%> |</li>
+                                             <li> <a href="cierreSesion.jsp">Cerrar Sesión</a> </li>
+                                             <%
+                                            }
+                                            
+                                            %>
+              
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -67,13 +82,21 @@
 									<!-- navbar-header -->
 									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 										
-				 <ul class="nav navbar-nav">
-											<li class="active"><a href="index.html">Home</a></li>
+                                                                            <ul class="nav navbar-nav">
+											<li class="active"><a href="index.jsp">Home</a></li>
 												<li><a href="about.html">Nosotros</a></li>
 												<li><a href="gallery.html">Galeria</a></li>
-												<li><a href="login.jsp">Reservar</a></li>
+												<li><a href="reservaCliente.jsp">Reservar</a></li>
 												<li><a href="contact.html">Contacto</a></li>
-
+                                                                                                   <%
+                                                                                                
+                                                                                                if(nombreUsuario!=null)
+                                                                                                {
+                                                                                                        %>
+                                                                                                <li class="active"><a href="misReservas.jsp">Mis Reservas</a></li>        
+                                                                                                        <%
+                                                                                                }
+                                                                                                    %>                   
 											
 										</ul>
 
@@ -610,15 +633,5 @@
 <!--end-smooth-scrolling-->
 <!--js for bootstrap working-->
 	<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
-        
-        
-        
-        
-        
-        <h1>Bienvenido</h1>
-        <h3><a href="http://localhost:8080/VeranumApp/login.jsp">Iniciar Sesión</a></h3>
-        <h3><a href="http://localhost:8080/VeranumApp/registroCliente.jsp">Registrarse</a></h3>
-        <h3><a href="http://localhost:8080/VeranumApp/ofertas.jsp">Ver Ofertas</a></h3>
     </body>
 </html>

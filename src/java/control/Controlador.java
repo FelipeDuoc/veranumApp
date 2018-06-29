@@ -56,9 +56,9 @@ public class Controlador extends HttpServlet{
                 {
                     sesion.setAttribute("usuario", usuario);
                     sesion.setAttribute("nombreUsuario", usesion.getNombre_usuario());
-                    sesion.setAttribute("idHotel", usesion.getPersona_id());
+                    sesion.setAttribute("idPersona", usesion.getPersona_id());
                     
-                    dispatcher = request.getRequestDispatcher("/profile.jsp");
+                    dispatcher = request.getRequestDispatcher("/index.jsp");
                     dispatcher.forward(request, response);
                     //response.sendRedirect("index.html");
                 }

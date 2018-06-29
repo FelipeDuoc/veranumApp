@@ -211,7 +211,7 @@
 
 		
 			<div class="w3agile_footer_copy">
-				    <p>© 2017 Resort. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				    <p>© 2018 Veranum. Todos los derechos reservados</p>
 			</div>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>

@@ -68,13 +68,13 @@
 									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 										
 				 <ul class="nav navbar-nav">
-											<li><a href="index.html">Home</a></li>
+											<li><a href="index.jsp">Home</a></li>
 												<li><a href="about.html">Nosotros</a></li>
 												<li><a href="gallery.html">Galeria</a></li>
-												<li class="active"><a href="login.jsp">Reservar</a></li>
+												<li class="active"><a href="reservaCliente.jsp">Reservar</a></li>
 
 												<li><a href="contact.html">Contacto</a></li>
-
+                                                                                                            
 											
 										</ul>
 

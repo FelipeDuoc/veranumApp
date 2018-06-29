@@ -22,19 +22,21 @@ $(document).on("click", "#consultar", function() {
     $("#somediv").html("");
     
     $.get(get, function(responseJson) {          
-        var $table = $("<table>").appendTo($("#somediv"));
+        var $table = $('<table class="table table-striped">').appendTo($("#somediv"));
             
         $("<tr>").appendTo($table)                     
-                .append($("<th>").text("TIPO HABITACION"))
+                .append($("<th>").text("NOMBRE HABITACIÓN"))
                 .append($("<th>").text("VALOR"))
                 .append($("<th>").text("BAÑO"))
+                .append($("<th>").text("CAMA"))
                 .append($("<th>").text(""));
         $.each(responseJson, function(index, product) {    
             $("<tr>").appendTo($table)                     
                 .append($("<td>").text(product.nombre_tipo_habitacion))       
                 .append($("<td>").text(product.valor_diario_habitacion))      
-                .append($("<td>").text(product.nombre_tipo_banio))   
-                .append("<td></td>");  
+                .append($("<td>").text(product.nombre_tipo_banio))
+                .append($("<td>").text(product.nombre_tipo_cama)) 
+                .append("<td>").append("<a class='btn btn-info' href='sendReserva.jsp?idtipohabitacion="+product.id_tipo_habitacion+"'>Reservar</a>");  
         }); 
     });
 });
