@@ -68,7 +68,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
-                                            <%if(nombreUsuario==null){ %>
+				<%if(nombreUsuario==null){ %>
                                              <li> <a href="login.jsp"> INCIA SESION</a> </li>
                                              <li> <a href="registroCliente.jsp">| REGISTRATE !</a></li>
                                              <%

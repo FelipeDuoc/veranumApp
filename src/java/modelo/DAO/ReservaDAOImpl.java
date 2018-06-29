@@ -51,8 +51,10 @@ public class ReservaDAOImpl implements ReservaDAO{
                 reser.setCosto_total(rs.getInt(4));
                 reser.setEstado_reserva(rs.getString(5));
                 reser.setHabitacion_id(rs.getInt(6));
-                reser.setPersona_id(7);
-                reser.setConvenio_id(8);
+                reser.setNombre_habitacion(rs.getString(7));
+                reser.setPersona_id(rs.getInt(8));
+                reser.setNombre_persona(rs.getString(9));
+                reser.setConvenio_id(10);
                 
                 lista.add(reser);
                 

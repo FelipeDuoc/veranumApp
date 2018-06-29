@@ -16,20 +16,24 @@ public class Reserva {
     private int costo_total;
     private String estado_reserva;
     private int habitacion_id;
+    private String nombre_habitacion;
     private int persona_id;
+    private String nombre_persona;
     private int convenio_id;
 
     public Reserva() {
     }
 
-    public Reserva(int id_reserva, String fecha_check_in, String fecha_check_out, int costo_total, String estado_reserva, int habitacion_id, int persona_id, int convenio_id) {
+    public Reserva(int id_reserva, String fecha_check_in, String fecha_check_out, int costo_total, String estado_reserva, int habitacion_id, String nombre_habitacion, int persona_id, String nombre_persona, int convenio_id) {
         this.id_reserva = id_reserva;
         this.fecha_check_in = fecha_check_in;
         this.fecha_check_out = fecha_check_out;
         this.costo_total = costo_total;
         this.estado_reserva = estado_reserva;
         this.habitacion_id = habitacion_id;
+        this.nombre_habitacion = nombre_habitacion;
         this.persona_id = persona_id;
+        this.nombre_persona = nombre_persona;
         this.convenio_id = convenio_id;
     }
 
@@ -81,12 +85,28 @@ public class Reserva {
         this.habitacion_id = habitacion_id;
     }
 
+    public String getNombre_habitacion() {
+        return nombre_habitacion;
+    }
+
+    public void setNombre_habitacion(String nombre_habitacion) {
+        this.nombre_habitacion = nombre_habitacion;
+    }
+
     public int getPersona_id() {
         return persona_id;
     }
 
     public void setPersona_id(int persona_id) {
         this.persona_id = persona_id;
+    }
+
+    public String getNombre_persona() {
+        return nombre_persona;
+    }
+
+    public void setNombre_persona(String nombre_persona) {
+        this.nombre_persona = nombre_persona;
     }
 
     public int getConvenio_id() {
@@ -99,8 +119,10 @@ public class Reserva {
 
     @Override
     public String toString() {
-        return "Reserva{" + "id_reserva=" + id_reserva + ", fecha_check_in=" + fecha_check_in + ", fecha_check_out=" + fecha_check_out + ", costo_total=" + costo_total + ", estado_reserva=" + estado_reserva + ", habitacion_id=" + habitacion_id + ", persona_id=" + persona_id + ", convenio_id=" + convenio_id + '}';
+        return "Reserva{" + "id_reserva=" + id_reserva + ", fecha_check_in=" + fecha_check_in + ", fecha_check_out=" + fecha_check_out + ", costo_total=" + costo_total + ", estado_reserva=" + estado_reserva + ", habitacion_id=" + habitacion_id + ", nombre_habitacion=" + nombre_habitacion + ", persona_id=" + persona_id + ", nombre_persona=" + nombre_persona + ", convenio_id=" + convenio_id + '}';
     }
+
+    
     
     
     
