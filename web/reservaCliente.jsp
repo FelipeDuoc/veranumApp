@@ -68,8 +68,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
-						<li> <a href="login.jsp"> Ingresar</a>  </li>
-						<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">hola@veranum.cl</a></li>
+                                            <%if(nombreUsuario==null){ %>
+                                             <li> <a href="login.jsp"> INCIA SESION</a> </li>
+                                             <li> <a href="registroCliente.jsp">| REGISTRATE !</a></li>
+                                             <%
+                                            }else{
+                                            %>
+                                             <li>| Usuario: <%=nombreUsuario%> |</li>
+                                             <li> <a href="cierreSesion.jsp">Cerrar Sesión</a> </li>
+                                             <%
+                                            }
+                                            
+                                            %>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
