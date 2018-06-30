@@ -33,7 +33,7 @@ $(document).on("click", "#consultar", function() {
         $.each(responseJson, function(index, product) {    
             $("<tr>").appendTo($table)                     
                 .append($("<td>").text(product.nombre_tipo_habitacion))       
-                .append($("<td>").text(product.valor_diario_habitacion))      
+                .append($("<td>").append("$ "+product.valor_diario_habitacion+" (CLP)"))      
                 .append($("<td>").text(product.nombre_tipo_banio))
                 .append($("<td>").text(product.nombre_tipo_cama)) 
                 .append("<td>").append("<a class='btn btn-info' href='sendReserva.jsp?idtipohabitacion="+product.id_tipo_habitacion+"'>Reservar</a>");  

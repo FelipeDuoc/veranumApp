@@ -189,7 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-6 form-left-agileits-w3layouts bottom-w3ls">
 							<label><i class="fa fa-home" aria-hidden="true"></i> Tipo Cama :</label>
 							<select name="tipocama" id="tipocama" class="form-control">
-								<option></option>
+								<option value="0">Seleccionar</option>
 								<option value="1">1 Cama Doble</option>
                                                                 <option value="2">2 Cama Doble</option>
                                                                 <option value="3">1 Cama Simple</option>
@@ -199,16 +199,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-6 form-left-agileits-w3layouts second-agile">
 							<label><i class="fa fa-users" aria-hidden="true"></i> Numero de Personas :</label>
 							<select name="cantidadpersona" id="cantidadpersona" class="form-control">
-								<option></option>
+								<option value="0">Seleccionar</option>
 								<option value="1">1</option>
                                                                 <option value="2">2</option>
                                                                 <option value="3">3</option>
                                                                 <option value="4">4</option>
 							</select>
 					</div>
+                                        <div class="col-md-12 form-left-agileits-w3layouts second-agile">
+							<label><i class="fa fa-users" aria-hidden="true"></i>Servicios Extras</label>
+					</div>
                                         <div class="col-md-6 form-left-agileits-w3layouts second-agile">
-							<label><i class="fa fa-users" aria-hidden="true"></i> Servicios extras:</label>
-							<input type="checkbox" value="1" id="servicioextra">
+							<label><i class="fa fa-users" aria-hidden="true"></i> GYM:</label>
+							<input type="checkbox" value="1" id="GYM">
+                                                        
+					</div>
+                                        <div class="col-md-6 form-left-agileits-w3layouts second-agile">
+							<label><i class="fa fa-users" aria-hidden="true"></i> Piscina:</label>
+							<input type="checkbox" value="2" id="piscina">
+                                                        
+					</div>
+                                        <div class="col-md-6 form-left-agileits-w3layouts second-agile">
+							<label><i class="fa fa-users" aria-hidden="true"></i> Restaurant:</label>
+							<input type="checkbox" value="3" id="restaurant">
+                                                        
+					</div>
+                                        <div class="col-md-6 form-left-agileits-w3layouts second-agile">
+							<label><i class="fa fa-users" aria-hidden="true"></i> Transporte privado</label>
+							<input type="checkbox" value="4" id="transporte">
+                                                        
 					</div>
                                
             

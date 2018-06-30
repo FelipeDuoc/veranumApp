@@ -411,7 +411,7 @@
                                                                 <h6 class="bed"><i class="fa fa-bed" aria-hidden="true"></i></h6>
                                                             </div>
 							<div class="price-selet pric-sclr1">		    			   
-                                                            <a href="http://localhost:8080/VeranumApp/reservarOferta.jsp?id=<%=t.getId_tipo_habitacion() %>">Reserva Ahora!</a>
+                                                            <a href="http://localhost:8080/VeranumApp/reservaCliente.jsp">Reserva Ahora!</a>
 							</div>
 						</div>
 					</div>
