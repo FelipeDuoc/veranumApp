@@ -230,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                         
 					</div>
                                
-            
+                                        
                                
 					<div class="clearfix"> </div>
 					<div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
