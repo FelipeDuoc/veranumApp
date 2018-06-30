@@ -54,7 +54,7 @@ public class ReservaDAOImpl implements ReservaDAO{
                 reser.setNombre_habitacion(rs.getString(7));
                 reser.setPersona_id(rs.getInt(8));
                 reser.setNombre_persona(rs.getString(9));
-                reser.setConvenio_id(10);
+                reser.setConvenio_id(rs.getInt(10));
                 
                 lista.add(reser);
                 
@@ -69,6 +69,36 @@ public class ReservaDAOImpl implements ReservaDAO{
             }
         }
         return lista;
+    }
+
+    @Override
+    public int cancelarReserva(int idReserva, int idHabitacion) {
+        int res = 0;
+        Reserva reser = null;
+        cx = new Conexion();
+        con = cx.getCon();
+        OracleCallableStatement ps = null;
+        ResultSet rs = null;
+        try {
+            ps = (OracleCallableStatement) con.prepareCall("{call PKG_RESERVA.PROC_CANCEL_RESERVA(?,?,?)}");
+            ps.setInt(1, idHabitacion);
+            ps.setInt(2, idReserva);
+            ps.registerOutParameter(3, OracleTypes.INTEGER);
+            
+            ps.execute();
+            
+            res = (int)ps.getObject(3);
+            
+        } catch (SQLException ex) {
+            logger.log(Level.INFO, "CALL PROCEDURE PKG_RESERVA.PROC_CANCEL_RESERVA, sql exception statement: {0}", ex.getMessage());
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException ex) {
+                logger.log(Level.SEVERE, null, ex);
+            }
+        }
+        return res;
     }
     
 }

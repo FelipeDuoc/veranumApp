@@ -60,8 +60,6 @@ public class ControladorJson extends HttpServlet{
                 response.setContentType("application/json");
                 response.setCharacterEncoding("UTF-8");
                 response.getWriter().write(gson);
-                
-                
             break;
         }
         
@@ -73,9 +71,7 @@ public class ControladorJson extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
         
-        //response.setContentType("application/json; charset=utf-8");
         
         
         

@@ -14,4 +14,6 @@ import modelo.bean.Reserva;
  */
 public interface ReservaDAO {
     public List<Reserva> verReservas(int persona_id);
+    public int cancelarReserva(int idReserva, int idHabitacion);
+    
 }

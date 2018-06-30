@@ -171,6 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                       
                                       <h3 class="tittle why">    Mis reservas</h3>
                                       
+                                      
                                       <table class="table table-striped">
                                           <thead >
                                               <tr>
@@ -201,8 +202,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                   <td><%=det.getNombre_persona()%></td>
                                                   <td><%=det.getNombre_habitacion()%></td>
                                                   <td><%=det.getCosto_total()%></td>
-                                                  <td><%=det.getEstado_reserva()%></td>
-                                                  <td><a class="btn btn-danger" href="#" id="cancelar_<%=det.getId_reserva()%>">Cancelar</a></td>
+                                                  <% String estado = det.getEstado_reserva();
+                                                     if(estado.equals("1")) { %>
+                                                  <td>Activa</td>
+                                                  <td><a class="btn btn-danger" href="cancelarReserva.jsp?idReserva=<%=det.getId_reserva()%>&idHabitacion=<%=det.getHabitacion_id()%>">Cancelar</a></td>
+                                                  <% } else { %>
+                                                  <td>Inactiva</td>
+                                                  <td></td>
+                                                  <% } %>
                                               </tr>
                                               <%
                                                 }
