@@ -45,7 +45,7 @@
                                             
                                             
                                             <%if(nombreUsuario==null){ %>
-                                             <li> <a href="login.jsp"> INCIA SESION</a> </li>
+                                             <li> <a href="login.jsp"> INICIA SESION</a> </li>
                                              <li> <a href="registroCliente.jsp">| REGISTRATE !</a></li>
                                              <%
                                             }else{
@@ -84,10 +84,10 @@
 										
                                                                             <ul class="nav navbar-nav">
 											<li class="active"><a href="index.jsp">Home</a></li>
-												<li><a href="about.html">Nosotros</a></li>
-												<li><a href="gallery.html">Galeria</a></li>
+												<li><a href="#">Nosotros</a></li>
+												<li><a href="#">Galeria</a></li>
 												<li><a href="reservaCliente.jsp">Reservar</a></li>
-												<li><a href="contact.html">Contacto</a></li>
+												<li><a href="#">Contacto</a></li>
                                                                                                    <%
                                                                                                 
                                                                                                 if(nombreUsuario!=null)
@@ -152,8 +152,8 @@
 										<div class="w3_agileits_services_grid_1">
 											<img src="images/5.jpg" alt="service-img">
 										</div>
-										<h3>Deluxe Room</h3>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+										<h3>Habitaciones Vip</h3>
+										<p>Habitaciones exclusivas y equipadas con la mejor tecnología y comodidad.</p>
 									</div>
 								</div>
 								<div class="col-md-3 w3_agileits_services_grid hvr-overline-from-center">
@@ -161,8 +161,8 @@
 										<div class="w3_agileits_services_grid_1">
 											<img src="images/6.jpg" alt="service-img">
 										</div>
-										<h3>Luxury Room</h3>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+										<h3>Habitaciones Premium</h3>
+										<p>Habitaciones con servicio personalizado y servicio 24 hrs.</p>
 									</div>
 								</div>
 								<div class="col-md-3 w3_agileits_services_grid hvr-overline-from-center">
@@ -170,8 +170,8 @@
 										<div class="w3_agileits_services_grid_1">
 											<img src="images/7.jpg" alt="service-img">
 										</div>
-										<h3>Swimming Pool</h3>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+										<h3>Piscina Temperada</h3>
+										<p>Extravagante piscina temperada regulada automaticamente con Energía Solar.</p>
 									</div>
 								</div>
 								<div class="col-md-3 w3_agileits_services_grid hvr-overline-from-center">
@@ -179,8 +179,8 @@
 										<div class="w3_agileits_services_grid_1">
 											<img src="images/8.jpg" alt="service-img">
 										</div>
-										<h3>Spaa Care</h3>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+										<h3>Spaa</h3>
+										<p>Servicio de Spa  para garantizar una experiencia de relajación única.</p>
 									</div>
 								</div>
 								<div class="clearfix"> </div>
@@ -235,16 +235,8 @@
 	</div>
 	<!-- about-bottom -->
 	<div class="about-bottom">
-		<div class="col-md-6 w3l_about_bottom_left">
-				  <div class="video-grid-single-page-agileits">
-														<div data-video="44fbHx7P-t8" id="video"> <img src="images/watch.jpg" alt="" class="img-responsive" /> </div>
-													</div>
-
-			<div class="w3l_about_bottom_left_video">
-				<h4>watch our video</h4>
-			</div>
-		</div>
-		<div class="col-md-6 w3l_about_bottom_right one">
+		
+		<div class="col-md-12 w3l_about_bottom_right one">
 			<h3 class="tittle why">¿Por qué elegir a Veranum?</h3>
 			<p>Veranum cuenta con mas de 30 años en el mercado hotelero, nuestra experiencia y nuestros clientes nos avalan</p>
 			<div class="panel-group w3l_panel_group_faq" id="accordion" role="tablist" aria-multiselectable="true">
@@ -295,84 +287,6 @@
 		</div>
 		<div class="clearfix"> </div>
 	</div>
-<!-- //about-bottom -->
-	<!-- about-bottom -->
-	<!--<div class="about-bottom" id="ab">
-	<div class="col-md-6 w3l_about_bottom_right two">
-			<h3 class="tittle why">Book a Reservation</h3>
-			<div class="book-form">
-
-			   <form action="#" method="post">
-					<div class="col-md-6 form-date-w3-agileits">
-						<label><i class="fa fa-user" aria-hidden="true"></i> Name :</label>
-						<input type="text" name="name" placeholder="Your name" required="">
-					</div>
-					<div class="col-md-6 form-date-w3-agileits second-agile">
-						<label><i class="fa fa-envelope" aria-hidden="true"></i> Email :</label>
-						<input type="email" name="email" placeholder="Your email" required="">
-					</div>
-					 <div class="col-md-6 form-date-w3-agileits">
-									<label><i class="fa fa-calendar" aria-hidden="true"></i> Arrival Date :</label>
-									<input  id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-								
-								</div>
-					<div class="col-md-6 form-time-w3layouts second-agile">
-							<label><i class="fa fa-clock-o" aria-hidden="true"></i> Time :</label>
-							<input type="time">
-					</div>
-					<div class="col-md-6 form-date-w3-agileits">
-						        <label><i class="fa fa-calendar" aria-hidden="true"></i> Departure Date :</label>
-									<input  id="datepicker1" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									
-								</div>
-					<div class="col-md-6 form-time-w3layouts second-agile">
-							<label><i class="fa fa-clock-o" aria-hidden="true"></i> Time :</label>
-							<input type="time">
-					</div>
-					<div class="col-md-6 form-left-agileits-w3layouts bottom-w3ls">
-							<label><i class="fa fa-home" aria-hidden="true"></i> Choose a Room :</label>
-							<select class="form-control">
-								<option></option>
-								<option>Standard Double Room</option>
-								<option>Standard Family Room</option>
-								<option>Garden Family Room</option>
-								<option>Deluxe Double Room</option>
-								<option>Executive Junior Suite</option>
-								<option>Maisonette</option>
-							</select>
-					</div>
-					<div class="col-md-6 form-left-agileits-w3layouts second-agile">
-							<label><i class="fa fa-users" aria-hidden="true"></i> No.of People :</label>
-							<select class="form-control">
-								<option></option>
-								<option>1 Person</option>
-								<option>2 People</option>
-								<option>3 People</option>
-								<option>4 People</option>
-								<option>5 People</option>
-								<option>More</option>
-							</select>
-					</div>
-					<div class="clearfix"> </div>
-					<div class="make wow shake" data-wow-duration="1s" data-wow-delay=".5s">
-						  <input type="submit" value="Make a Reservation">
-					</div>
-			</form>
-								</div>
-
-		</div>
-		<div class="col-md-6 w3l_about_bottom_left">
-			
-<img src="images/33.jpg" alt="" class="img-responsive" />
-			<div class="w3l_about_bottom_left_video book-text">
-				<h4>BooK Now</h4>
-			</div>
-		</div>
-		
-		<div class="clearfix"> </div>
-	</div> -->
-<!-- //about -->
-	<!-- /plans -->
       <div class="plans-section">
 				 <div class="container">
 				 <h3 class="w3l-inner-h-title">Ofertas</h3>
@@ -396,15 +310,7 @@
 						</div>
 						<div class="price-gd-bottom">
 							   <div class="price-list">
-								
-								<!--<ul>
-                                                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-                                                                </ul>-->
-                                                               
+							
                                                                 <h6 class="">Tipo Cama: <%=t.getNombre_tipo_cama()%>  </h6>
                                                                 <h6 class="">"Tipo Baño: <%=t.getNombre_tipo_banio()%>  </h6>
                                                                 
@@ -436,9 +342,9 @@
 							<li>
 								<div class="w3_agileits_testimonial_grid">
 								<i class="fa fa-quote-right" aria-hidden="true"></i>
-									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-										dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<p>Las habitaciones son espectaculares, la atención es excelente y sobre todo
+                                                                        los servicios que ofrecen. Son muy acogedores y muy exclusivos, jamás vi
+                                                                        un hotel de estas caracteristicas.</p>
 									<img src="images/admin.jpg" alt=" " class="img-responsive" />
 									
 								</div>
@@ -446,9 +352,9 @@
 							<li>
 								<div class="w3_agileits_testimonial_grid">
 								<i class="fa fa-quote-right" aria-hidden="true"></i>
-									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-										dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<p>Visite Hoteles Veranum por una semana y quede sorprendido, jamás pense
+                                                                        que la cantidad de servicios que podían ofrecer fuese tan grande. Reserve una habitación
+                                                                        desde la comodidad de mi hogar sin ningun problema.</p>
 									<img src="images/admin2.jpg" alt=" " class="img-responsive" />
 									
 								</div>
@@ -456,9 +362,9 @@
 							<li>
 								<div class="w3_agileits_testimonial_grid">
 								<i class="fa fa-quote-right" aria-hidden="true"></i>
-									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-										dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<p>Sin lugar a dudas volveré a visitar este hotel. Me gustó mucho la idea, que 
+                                                                        tengan convenios con otras empresas, las ofertas esten siempre y la conectividad
+                                                                        que ofrecen es espectaular.</p>
 									<img src="images/admin.jpg" alt=" " class="img-responsive" />
 									
 								</div>
@@ -476,47 +382,9 @@
 	<div class="w3l-footer">
 		<div class="container">
          <div class="footer-info-agile">
-				<div class="col-md-2 footer-info-grid links">
-					<h4>Quick links</h4>
-					<ul>
-						       <li><a href="index.html">Home</a></li> 
-								<li><a href="about.html">About</a></li> 
-								<li><a href="codes.html">Services</a></li> 
-								<li><a href="gallery.html">Gallery</a></li> 
-								<li><a href="contact.html">Contact</a></li> 
-					</ul>
-				</div>
-				<div class="col-md-3 footer-info-grid address">
-					<h4>Address</h4>
-					<address>
-						<ul>
-							<li>Mexico United States 3000</li>
-							<li>40019 Honey Street</li>
-							<li>BO,Mexico</li>
-							<li>Telephone : +1 (734) 123-4567</li>
-							<li>Email : <a class="mail" href="mailto:mail@example.com">info(at)example.com</a></li>
-						</ul>
-					</address>
-				</div>
-				<div class="col-md-3 footer-grid">
-				   <h4>Instagram</h4>
-					<div class="footer-grid-instagram">
-					<a href="#"><img src="images/f1.jpg" alt=" " class="img-responsive"></a>
-					</div>
-					<div class="footer-grid-instagram">
-					<a href="#"><img src="images/f2.jpg" alt=" " class="img-responsive"></a>
-					</div>
-					<div class="footer-grid-instagram">
-						<a href="#"><img src="images/f3.jpg" alt=" " class="img-responsive"></a>
-					</div>
-					<div class="footer-grid-instagram">
-					<a href="#"><img src="images/f4.jpg" alt=" " class="img-responsive"></a>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-4 footer-info-grid">
+				<div class="col-md-6 footer-info-grid">
 				<div class="connect-social">
-					<h4>Connect with us</h4>
+					<h4>Contacto</h4>
 					<section class="social">
                         <ul>
 							<li><a class="icon fb" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -535,16 +403,6 @@
 					
 				</div>
 				<div class="clearfix"></div>
-			</div>
-
-			<div class="connect-agileits newsletter">
-				<h4>Newsletter</h4>
-					<p>Subscribete a nuestro newsletter para mantenerte informado sobre las ultimas noticias y promociones de Veranum
-					</p>
-					<form action="#" method="post" class="newsletter">
-						<input class="email" type="email" placeholder="Your email address..." required="">
-						<input type="submit" class="submit" value="Subscribe">
-					</form>
 			</div>
 	   </div>
      </div>
